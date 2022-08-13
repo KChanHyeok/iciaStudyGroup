@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>계산기</title>
+        <style>
+            .screen {
+                margin-top: 10px;
+                margin-left: 15px;
+                width: 365px;
+                height: 100px;
+                border: 1px solid black;
+            }
+            .bord {
+                float: left;
+                border: 1px solid black;
+                width: 400px;
+                height: 700px;
+            }
+            .pad {
+                float: left;
+                border: 1px solid black;
+                width: 120px;
+                height: 120px;
+            }
+            .padBord {
+                margin-left: 15px;
+                margin-top: 20px;
+            }
+            .zero {
+                width: 365px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bord">
+            <div class="screen"><h1 id="screenNumber"></h1></div>
+            <div class="padBord">
+                <div class="pad" onclick="padNumber(1)">1</div>
+                <div class="pad" onclick="padNumber(2)">2</div>
+                <div class="pad" onclick="padNumber(3)">3</div>
+                <div class="pad" onclick="padNumber(4)">4</div>
+                <div class="pad" onclick="padNumber(5)">5</div>
+                <div class="pad" onclick="padNumber(6)">6</div>
+                <div class="pad" onclick="padNumber(7)">7</div>
+                <div class="pad" onclick="padNumber(8)">8</div>
+                <div class="pad" onclick="padNumber(9)">9</div>
+                <div class="pad zero" onclick="padNumber(0)">0</div>
+            </div>
+        </div>
+        <div class="pad" onclick="plus()">더하기</div>
+        <div class="pad" onclick="minus()">빼기</div>
+        <div class="pad" onclick="multi()">곱하기</div>
+        <div class="pad" onclick="divide()">나누기</div>
+        <!-- <div class="pad" onclick="result()">결과보기</div> -->
+    </body>
+    <script>
+        function padNumber(number) {
+            var input1 = document.getElementById('screenNumber').innerHTML+=number
+            console.log(input1)
+        }
+        function plus(num1, num2) {
+            document.getElementById('screenNumber').innerHTML = num1+num2
+        }
+    </script>
+</html>
