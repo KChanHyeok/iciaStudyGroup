@@ -36,7 +36,7 @@
     </head>
     <body>
         <div class="bord">
-            <div class="screen"><h1 id="screenNumber"></h1></div>
+            <div class="screen"><h1 id="resultNum"><span id="fistNum"></span><span id="centerNum"></span><span id="secondNum"></span></h1></div>
             <div class="padBord">
                 <div class="pad" onclick="padNumber(1)">1</div>
                 <div class="pad" onclick="padNumber(2)">2</div>
@@ -50,19 +50,51 @@
                 <div class="pad zero" onclick="padNumber(0)">0</div>
             </div>
         </div>
-        <div class="pad" onclick="plus()">더하기</div>
-        <div class="pad" onclick="minus()">빼기</div>
-        <div class="pad" onclick="multi()">곱하기</div>
-        <div class="pad" onclick="divide()">나누기</div>
+        <div class="pad" onclick="reset()">초기화</div>
+        <div class="pad" onclick="plus(fistNum.innerHTML, secondNum.innerHTML)">더하기</div>
+        <div class="pad" onclick="minus(fistNum.innerHTML, secondNum.innerHTML)">빼기</div>
+        <div class="pad" onclick="multi(fistNum.innerHTML, secondNum.innerHTML)">곱하기</div>
+        <div class="pad" onclick="divide(fistNum.innerHTML, secondNum.innerHTML)">나누기</div>
         <!-- <div class="pad" onclick="result()">결과보기</div> -->
     </body>
     <script>
         function padNumber(number) {
-            var input1 = document.getElementById('screenNumber').innerHTML+=number
-            console.log(input1)
+            if(!document.getElementById('fistNum').innerHTML) {
+                return document.getElementById('fistNum').innerHTML+=number
+            }else {
+                return document.getElementById('secondNum').innerHTML+=number
+            }
+        }
+        function reset() {
+             document.getElementById('resultNum').innerHTML=`<span id="fistNum"></span><span id="centerNum"></span><span id="secondNum"></span>`
         }
         function plus(num1, num2) {
-            document.getElementById('screenNumber').innerHTML = num1+num2
+            if(!document.getElementById('centerNum').innerHTML){
+                document.getElementById('centerNum').innerHTML='+'
+            } else if (document.getElementById('secondNum').innerHTML){
+                document.getElementById('resultNum').innerHTML= parseInt(num1) + parseInt(num2)
+            }
+        }
+        function minus(num1, num2) {
+            if (!document.getElementById('centerNum').innerHTML) {
+                document.getElementById('centerNum').innerHTML = '-'
+            } else if (document.getElementById('secondNum').innerHTML) {
+                document.getElementById('resultNum').innerHTML = parseInt(num1) - parseInt(num2)
+            }
+        }
+        function multi(num1, num2) {
+            if (!document.getElementById('centerNum').innerHTML) {
+                document.getElementById('centerNum').innerHTML = '×'
+            } else if (document.getElementById('secondNum').innerHTML) {
+                document.getElementById('resultNum').innerHTML = parseInt(num1) * parseInt(num2)
+            }
+        }
+        function divide(num1, num2) {
+            if (!document.getElementById('centerNum').innerHTML) {
+                document.getElementById('centerNum').innerHTML = '÷'
+            } else if (document.getElementById('secondNum').innerHTML) {
+                document.getElementById('resultNum').innerHTML = parseInt(num1) / parseInt(num2)
+            }
         }
     </script>
 </html>
