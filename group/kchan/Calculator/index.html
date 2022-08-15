@@ -71,28 +71,28 @@
         function plus(num1, num2) {
             if(!document.getElementById('centerNum').innerHTML){
                 document.getElementById('centerNum').innerHTML='+'
-            } else if (document.getElementById('secondNum').innerHTML){
+            } else if (document.getElementById('secondNum').innerHTML && document.getElementById('centerNum').innerHTML ==='+'){
                 document.getElementById('resultNum').innerHTML= parseInt(num1) + parseInt(num2)
             }
         }
         function minus(num1, num2) {
             if (!document.getElementById('centerNum').innerHTML) {
                 document.getElementById('centerNum').innerHTML = '-'
-            } else if (document.getElementById('secondNum').innerHTML) {
+            } else if (document.getElementById('secondNum').innerHTML && document.getElementById('centerNum').innerHTML === '-') {
                 document.getElementById('resultNum').innerHTML = parseInt(num1) - parseInt(num2)
             }
         }
         function multi(num1, num2) {
             if (!document.getElementById('centerNum').innerHTML) {
                 document.getElementById('centerNum').innerHTML = '×'
-            } else if (document.getElementById('secondNum').innerHTML) {
+            } else if (document.getElementById('secondNum').innerHTML && document.getElementById('centerNum').innerHTML === '×') {
                 document.getElementById('resultNum').innerHTML = parseInt(num1) * parseInt(num2)
             }
         }
         function divide(num1, num2) {
             if (!document.getElementById('centerNum').innerHTML) {
                 document.getElementById('centerNum').innerHTML = '÷'
-            } else if (document.getElementById('secondNum').innerHTML) {
+            } else if (document.getElementById('secondNum').innerHTM && document.getElementById('centerNum').innerHTML === '÷') {
                 document.getElementById('resultNum').innerHTML = parseInt(num1) / parseInt(num2)
             }
         }
