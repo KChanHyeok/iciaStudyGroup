@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>다이아몬드 만들기</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        for(var i=1; i<10; i++){
+            if(i<=5){
+                for(var j=5; j>i; j--){
+                    document.write('&nbsp')
+                }
+                for(var k=1; k<(i*2); k++ ){
+                    document.write('*')
+                }
+            }else {
+                for(var l=5; l<i; l++){
+                    document.write('&nbsp')
+                }
+                for(var o=19; o>(i*2); o--){
+                    document.write('*')
+                }
+            }
+            document.write('<br>')
+        }
+    </script>
+</html>
