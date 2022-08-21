@@ -6,10 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>움직이는 박스</title>
         <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
             .backPage {
                 position: relative;
                 width: 800px;
@@ -39,8 +35,6 @@
 
             #player {
                 position: absolute;
-                bottom: 300px;
-                left: 350px;
                 width: 50px;
                 height: 50px;
                 background-color: red;
@@ -59,6 +53,39 @@
         </div>
     </body>
     <script>
+        var up = document.getElementById('up') 
+        var down = document.getElementById('down') 
+        var right = document.getElementById('right') 
+        var left = document.getElementById('left') 
+        var player = document.getElementById('player')
+        var i =0
+        var j =750
 
+        up.addEventListener('click', function(){
+            i=i-10
+            player.style.top=i+'px'
+            console.log(i)
+        })
+        down.addEventListener('click', function () {
+            i = i + 10
+            player.style.top = i + 'px'
+            console.log(i)
+        })
+
+
+
+        left.addEventListener('click', function(){
+            j=j+10
+            player.style.right=j+'px'
+            console.log("left: "+player.offsetLeft)
+        })
+        right.addEventListener('click', function(){
+            j=j-10
+            player.style.right=j+'px'
+            console.log("right: "+player.offsetLeft)
+        })
+
+        
+        
     </script>
 </html>
