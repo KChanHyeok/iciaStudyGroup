@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>움직이는 박스</title>
+        <style>
+            .backPage {
+                position: relative;
+                width: 800px;
+                height: 500px;
+                background-color: pink;
+            }
+            .controlBox {
+                margin-top: 10px;
+                margin-left: 20px;
+                width: 85px;
+                height: 85px;
+                border: 5px solid black;
+                border-radius: 50%;
+                float: left;
+                line-height: 35px;
+                text-align: center;
+            }
+            .controlBox:hover {
+                background-color: gray;
+                color: white;
+                cursor: pointer;
+            }
+            .controlBox:active {
+                background-color: lightgray;
+                
+            }
+
+            #player {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="backPage">
+            <div id="player"></div>
+        </div>
+        <div>
+            <div class="controlBox" id="up"><h1>up</h1></div>
+            <div class="controlBox" id="down"><h1>down</h1></div>
+            <div class="controlBox" id="right"><h1>right</h1></div>
+            <div class="controlBox" id="left"><h1>left</h1></div>
+        </div>
+    </body>
+    <script>
+        var up = document.getElementById('up') 
+        var down = document.getElementById('down') 
+        var right = document.getElementById('right') 
+        var left = document.getElementById('left') 
+        var player = document.getElementById('player')
+        var i =0
+        var j =750
+
+        up.addEventListener('click', function(){
+            i=i-10
+            player.style.top=i+'px'
+            console.log(i)
+        })
+        down.addEventListener('click', function () {
+            i = i + 10
+            player.style.top = i + 'px'
+            console.log(i)
+        })
+
+
+
+        left.addEventListener('click', function(){
+            j=j+10
+            player.style.right=j+'px'
+            console.log("left: "+player.offsetLeft)
+        })
+        right.addEventListener('click', function(){
+            j=j-10
+            player.style.right=j+'px'
+            console.log("right: "+player.offsetLeft)
+        })
+
+        
+        
+    </script>
+</html>
