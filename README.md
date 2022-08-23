@@ -15,6 +15,7 @@ study/group으로 들어가 자신의 파일을 생성 하시면 됩니다. (아
  
  <p>
  항상 피드백을 받고 있습니다 github 서로의 공부 발전을 위해 항상 새롭게 나아갑니다<br>
+ 관리자 : 강찬혁 <br>
  KaKaoTAlk ID : kangkang99<br>
  phonNumber : 010-9960-0464 (문제될시 삭제)<br>
  email : kang9kang9@gmail.com
