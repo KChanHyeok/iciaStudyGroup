@@ -35,9 +35,13 @@ window의 경우 window키+R을 누를시 실행이 나오게 됩니다 그곳�
 그럼 처음에 뜨는 모습이 <br>
 ```
 "C:\Users\mypc\"
+
 ```
+대부분은 이렇게 나올수도 있고 아닐수도 있습니다 다르다고 당황하지 않으셔도 됩니다.<br>
+우리는 그저 폴더를 만들기만 할 뿐입니다<br>
 
 
 ```
 git clone https://github.com/KChanHyeok/iciaStudyGroup.git
+
 ```
