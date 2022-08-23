@@ -21,4 +21,7 @@ study/group으로 들어가 자신의 파일을 생성 하시면 됩니다. (아
  email : kang9kang9@gmail.com
  </p>
 
-
+<h1>처음사용방법</h1>
+<ul>
+ <li></li>
+</ul>
