@@ -15,7 +15,7 @@ study/group으로 들어가 자신의 파일을 생성 하시면 됩니다. (아
  
  <p>
  항상 피드백을 받고 있습니다 github 서로의 공부 발전을 위해 항상 새롭게 나아갑니다<br>
- 관리자 : 강찬혁 <br>
+ iciaStudyGroup 관리자 : 강찬혁 <br>
  KaKaoTAlk ID : kangkang99<br>
  phonNumber : 010-9960-0464 (문제될시 삭제)<br>
  email : kang9kang9@gmail.com
@@ -32,10 +32,12 @@ study/group으로 들어가 자신의 파일을 생성 하시면 됩니다. (아
 window의 경우 window키+R을 누를시 실행이 나오게 됩니다 그곳에 'cmd'라고 입력후 확인을 누르면 명령 프로토콜창이 나오게 됩니다<br>
 리눅스 같은 경우는 Command-N 또는 Control-Command-T을 입력해줍니다 <br>
 
-그럼 처음에 뜨는 모습이 <br>
+그럼 처음에 뜨는 모습은 <br>
 ```
 "C:\Users\mypc\"
-
+C:는 드라이브
+Users 유저=> 컴퓨터마다 다를수 같을수도 있음
+mypc 유저명 => 설정한것에 다릅니다
 ```
 대부분은 이렇게 나올수도 있고 아닐수도 있습니다 다르다고 당황하지 않으셔도 됩니다.<br>
 우리는 그저 폴더를 만들기만 할 뿐입니다<br>
@@ -43,5 +45,4 @@ window의 경우 window키+R을 누를시 실행이 나오게 됩니다 그곳�
 
 ```
 git clone https://github.com/KChanHyeok/iciaStudyGroup.git
-
 ```
