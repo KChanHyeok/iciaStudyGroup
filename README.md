@@ -34,4 +34,6 @@ window의 경우 window키+R을 누를시 실행이 나오게 됩니다 그곳�
 
 
 
-```git clone https://github.com/KChanHyeok/iciaStudyGroup.git```
+```
+git clone https://github.com/KChanHyeok/iciaStudyGroup.git
+```
