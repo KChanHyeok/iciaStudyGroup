@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raki">
+    <meta name="date" content="220901">
+    <link rel="shortcut icon" href="../../media_reference/image/catfavicon.ico">
+    <title>그리드메이커</title>
+    <!-- style -->
+    <style>
+        .items {
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+            border: 1px solid;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            margin: 5px;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        #space {
+            padding: 10px;
+            width: 600px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<!-- body -->
+
+<body>
+    <h2>좌석 배치도 만들기</h2>
+    <p>총 줄수 : <input type="number" id="row"></p>
+    <p>한 줄 별 칸수 : <input type="number" id="cols"></p>
+    <button onclick="maker()">생성</button>
+    <div id="space" class="space">
+        <!-- <div class="items"></div> -->
+    </div>
+</body>
+
+<!-- script -->
+<script>
+    const r = document.getElementById("row");
+    const c = document.getElementById("cols");
+    const sp = document.getElementById("space");
+
+    function maker() {
+        let rv = r.value; //줄수
+        let cv = c.value; //칸수
+        let str = "";
+
+        str = "<div>";
+        let x = 1;
+        for (let i = 0; i < rv; i++) {
+            str += "<div>";
+            for (let j = 0; j < cv; j++) {
+                //칸 요소 생성
+                str += `<div class='items'>${x}</div>`;
+                x++;
+            }
+            str += "</div>";
+        }
+        sp.innerHTML = str;
+
+        const items = document.querySelectorAll(".items");
+        console.log(items)
+        for (let i = 0; i < items.length; i++) {
+            items[i].checked = false;
+            items[i].addEventListener("click", cc);
+        }
+    }
+
+
+    function cc(e) {
+        const lo = e.target;
+        console.log(`누르기전 ${lo.checked}`);
+
+        if (lo.checked == "true") {
+            lo.style.backgroundColor = "grey";
+            lo.checked = "false";
+            console.log(lo.checked);
+        } else {
+            lo.style.backgroundColor = "red";
+            lo.checked = "true";
+            console.log(lo.checked);
+        }
+
+    }
+
+</script>
+
+</html>
