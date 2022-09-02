@@ -11,11 +11,10 @@ completion의 길이는 participant의 길이보다 1 작습니다.
 
 입출력 예
 
-participant | completion | return | 
----- | ---- | ---- | ----
-다리 | 다리1 | 다리2 | 뚝배기깹니다
-금 | 의 | 환 | 향
-return
+participant | completion | return  
+---- | ---- | ---- 
+다리 | 다리1 | 다리2 
+금 | 의 | 환 
 
 ["leo", "kiki", "eden"]	                            ["eden", "kiki"]	                          "leo"
 
