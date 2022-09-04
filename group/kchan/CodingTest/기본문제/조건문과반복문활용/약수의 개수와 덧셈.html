@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>약수의 개수와 덧셈</title>
+    </head>
+    <body>
+        <p><input type="number" id="f_num">부터</p>
+        <p><input type="number" id="s_num">까지</p>
+        <button onclick="measure()">입력</button>
+        <p id="result"></p>
+    </body>
+    <script>
+        const f_num = document.getElementById('f_num')
+        const s_num = document.getElementById('s_num')
+        const result = document.getElementById('result')
+
+        function measure() {
+            const f = Number(f_num.value)
+            const s = Number(s_num.value)
+            let counter = 0
+            for(let i = f; i<=s; i++) {
+                let result = []
+                for(let j=1; j<=i; j++){
+                    if(i%j==0){
+                        result.push(j)
+                    }
+                }
+                if(result.length%2==0){
+                    counter += i
+                }else {
+                    counter -= i
+                }
+            }
+            result.innerHTML=`${f}부터 ${s}까지의 모든수 중에서, 약수의 개수가 짝수인 약수를 더한값은 ${counter}입니다`
+        }
+    </script>
+</html>
