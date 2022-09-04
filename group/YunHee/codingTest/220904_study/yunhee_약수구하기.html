@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raki">
+    <meta name="date" content="220904">
+    <link rel="shortcut icon" href="../../media_reference/image/catfavicon.ico">
+    <title>약수구하기</title>
+    <!-- style -->
+    <style>
+
+    </style>
+</head>
+
+<!-- body -->
+
+<body>
+    <input type="number" id="num">
+    <button id="btn">입력</button>
+    <button id="evensum">약수 중 짝수의 합</button>
+    <button id="oddsum">약수 중 홀수의 합</button>
+    <p id="result"></p>
+</body>
+
+<!-- script -->
+<script>
+    const num = document.getElementById("num");
+    const btn = document.getElementById("btn");
+    const result = document.getElementById("result");
+    const evensum = document.getElementById("evensum");
+    const oddsum = document.getElementById("oddsum");
+    let arr = [];
+
+    btn.addEventListener("click", divide);
+    evensum.addEventListener("click", esum);
+    oddsum.addEventListener("click", osum);
+
+    function divide() {
+        let unum = num.value;
+        for (let i = 2; i < unum; i++) {
+            if (unum % i == 0) {
+                arr.push(i);
+            }
+        }
+        result.innerHTML = arr;
+        num.value = "";
+        return arr;
+    }
+    function esum() {
+        let arr = divide();
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                sum = sum + arr[i];
+            }
+        }
+        result.innerHTML = sum;
+        num.value = "";
+    }
+    function osum() {
+        let arr = divide();
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                sum = sum + arr[i];
+            }
+        }
+        result.innerHTML = sum;
+        num.value = "";
+    }
+</script>
+
+</html>
