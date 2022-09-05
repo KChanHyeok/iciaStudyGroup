@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raki">
+    <meta name="date" content="220904">
+    <link rel="shortcut icon" href="../../media_reference/image/catfavicon.ico">
+    <title>약수홀수짝수</title>
+    <!-- style -->
+    <style>
+
+    </style>
+</head>
+
+<!-- body -->
+
+<body>
+    <input type="number" id="num1"><br>
+    <input type="number" id="num2"><br>
+    <button id="btn">입력</button>
+    <p id="result"></p>
+</body>
+
+<!-- script -->
+<script>
+    const num1 = document.getElementById("num1");
+    const num2 = document.getElementById("num2");
+    const btn = document.getElementById("btn");
+    const re = document.getElementById("result");
+
+    let answer = btn.addEventListener("click", function () { solution(Number(num1.value), Number(num2.value)) });
+
+    function solution(left, right) {
+        var answer = 0;
+        for (let i = left; i <= right; i++) {
+            let arr = [];
+            for (let j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    arr.push(j);
+                }
+            }
+            if (arr.length % 2 == 0) {
+                answer += i;
+            }
+            else {
+                answer -= i;
+            }
+        }
+        re.innerHTML = answer;
+        return answer;
+    }
+</script>
+
+</html>
