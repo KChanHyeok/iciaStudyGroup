@@ -11,3 +11,6 @@ function solution(arr) {
 }
 
 // answer [1,3,0,1]
+
+
+//안녕하세요
